@@ -24,6 +24,30 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				
+				// Temporal Color System
+				temporal: {
+					deep: 'hsl(var(--temporal-deep))',
+					flow: 'hsl(var(--temporal-flow))',
+					calm: 'hsl(var(--temporal-calm))',
+					active: 'hsl(var(--temporal-active))',
+					resonance: 'hsl(var(--temporal-resonance))'
+				},
+				biometric: {
+					heart: 'hsl(var(--heart-rhythm))',
+					breath: 'hsl(var(--breath-flow))',
+					movement: 'hsl(var(--movement-pulse))',
+					attention: 'hsl(var(--attention-glow))'
+				},
+				memory: {
+					fade: 'hsl(var(--memory-fade))',
+					glow: 'hsl(var(--memory-glow))'
+				},
+				experience: {
+					deep: 'hsl(var(--experience-deep))',
+					light: 'hsl(var(--experience-light))'
+				},
+				
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -51,17 +75,18 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
-				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			backgroundImage: {
+				'temporal-gradient': 'var(--gradient-temporal)',
+				'biometric-gradient': 'var(--gradient-biometric)',
+				'memory-gradient': 'var(--gradient-memory)',
+				'ambient-gradient': 'var(--gradient-ambient)'
+			},
+			boxShadow: {
+				'temporal': 'var(--shadow-temporal)',
+				'biometric': 'var(--shadow-biometric)',
+				'resonance': 'var(--shadow-resonance)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -69,6 +94,54 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
+				'temporal-breathe': {
+					'0%, 100%': {
+						transform: 'scale(1) rotate(0deg)',
+						opacity: '0.7'
+					},
+					'50%': {
+						transform: 'scale(1.05) rotate(0.5deg)',
+						opacity: '1'
+					}
+				},
+				'biometric-pulse': {
+					'0%, 100%': {
+						transform: 'scale(1)',
+						filter: 'brightness(1)'
+					},
+					'50%': {
+						transform: 'scale(1.02)',
+						filter: 'brightness(1.2)'
+					}
+				},
+				'temporal-flow': {
+					'0%': {
+						transform: 'translateX(-100%) rotate(0deg)'
+					},
+					'100%': {
+						transform: 'translateX(100vw) rotate(360deg)'
+					}
+				},
+				'moment-fade': {
+					'0%': {
+						opacity: '1',
+						transform: 'scale(1)'
+					},
+					'100%': {
+						opacity: '0.3',
+						transform: 'scale(0.95)'
+					}
+				},
+				'experience-enhance': {
+					'0%': {
+						opacity: '0.7',
+						transform: 'scale(0.98)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'scale(1.02)'
+					}
+				},
 				'accordion-down': {
 					from: {
 						height: '0'
@@ -87,6 +160,11 @@ export default {
 				}
 			},
 			animation: {
+				'temporal-breathe': 'temporal-breathe 4s ease-in-out infinite',
+				'biometric-pulse': 'biometric-pulse 2s ease-in-out infinite',
+				'temporal-flow': 'temporal-flow 8s linear infinite',
+				'moment-fade': 'moment-fade 1s ease-out forwards',
+				'experience-enhance': 'experience-enhance 1s ease-out forwards',
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
 			}
