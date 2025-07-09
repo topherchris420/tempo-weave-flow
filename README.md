@@ -1,73 +1,72 @@
-# Welcome to your Lovable project
+# Interval - Temporal Modulation
 
-## Project info
+An ambient temporal modulation app that adapts your subjective experience of time through biometric awareness and environmental feedback.
 
-**URL**: https://lovable.dev/projects/f842109d-eb54-42ca-b5f4-31c058b60700
+![Temporal Research](./lovable-uploads/cc22021b-8c2b-4ae1-9e85-b1e9b74d34a7.png)
 
-## How can I edit this code?
+## Overview
 
-There are several ways of editing your application.
+Rather than using timers or calendars, Interval features an adaptive time-shaping engine that subtly shifts audiovisual feedback, interface pacing, and moment transitions to either extend, compress, or dissolve the sense of time based on your current state.
 
-**Use Lovable**
+The app passively monitors biometric signals (heart rate variability, breathing, movement), task engagement patterns, and environmental cues to dynamically adjust your temporal perception without intrusive alerts or measurements.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f842109d-eb54-42ca-b5f4-31c058b60700) and start prompting.
+## Core Modules
 
-Changes made via Lovable will be committed automatically to this repo.
+### 🌊 Chrono-Sensory Loop
+Modulates sounds, hues, ambient textures, and UI rhythm to entrain subjective pacing based on your natural rhythms.
 
-**Use your preferred IDE**
+### 🧠 Attention Phase Mapper
+Detects cognitive and emotional phases (stress, calm, flow states) using passive behavioral and biometric signals.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 🎨 Moment Sculptor
+Assigns symbolic or emotional "weight" to events for future recall intensity, enhancing or fading memories based on their significance.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### ⏰ Time Texture Dial
+Allows optional conscious input to reshape specific moments - compress a commute, expand a meaningful conversation.
 
-Follow these steps:
+### 🌅 Seamless Feedback Layer
+Provides environmental modulation through subtle animation changes, tonal shifts, and background resonance without intrusive notifications.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+## Philosophy
+
+Interval is designed to feel like being inside a temporal tuning fork. The UX is intentionally minimalist - no direct time input, no goals, no measurements. The app's purpose is to restore agency over perceived time not through control, but through felt coherence.
+
+## Technical Stack
+
+- **React** - Component-based UI architecture
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first styling with custom temporal design tokens
+- **Vite** - Fast development and build tooling
+- **Shadcn/UI** - Accessible component primitives
+
+## Getting Started
+
+```bash
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to project directory
+cd interval
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Design Principles
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- **Ambient Deployment**: Ready for mobile, desktop, or wearable platforms
+- **Sensory Integration**: Full sensory feedback is optional but available
+- **Passive Monitoring**: No active user input required for core functionality
+- **Temporal Coherence**: Subtle environmental shifts create felt time perception changes
+- **Minimalist Interface**: Clean, distraction-free experience focused on temporal awareness
 
-**Use GitHub Codespaces**
+## Project URL
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+**Live App**: [https://lovable.dev/projects/f842109d-eb54-42ca-b5f4-31c058b60700](https://lovable.dev/projects/f842109d-eb54-42ca-b5f4-31c058b60700)
 
-## What technologies are used for this project?
+---
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/f842109d-eb54-42ca-b5f4-31c058b60700) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+*Built with [Lovable](https://lovable.dev) - The AI-powered web development platform*
