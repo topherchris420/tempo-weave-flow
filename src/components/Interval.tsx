@@ -3,6 +3,11 @@ import { ChronoSensoryLoop } from './temporal/ChronoSensoryLoop';
 import { AttentionPhaseMapper, AttentionPhase } from './temporal/AttentionPhaseMapper';
 import { TimeTextureDial } from './temporal/TimeTextureDial';
 import { MomentSculptor } from './temporal/MomentSculptor';
+import { TemporalPoetryEngine } from './temporal/TemporalPoetryEngine';
+import { EnvironmentalSynthesis } from './temporal/EnvironmentalSynthesis';
+import { MemoryCrystalSystem } from './temporal/MemoryCrystalSystem';
+import { QuantumBreathInterface } from './temporal/QuantumBreathInterface';
+import { TemporalHarmonicGenerator } from './temporal/TemporalHarmonicGenerator';
 import temporalHero from '@/assets/temporal-hero.jpg';
 
 interface BiometricState {
@@ -40,6 +45,8 @@ export const Interval = () => {
 
   const [temporalIntensity, setTemporalIntensity] = useState(0.5);
   const [isInitialized, setIsInitialized] = useState(false);
+  const [currentEnvironment, setCurrentEnvironment] = useState('oceanic');
+  const [breathSyncLevel, setBreathSyncLevel] = useState(0);
 
   // Initialize the temporal environment
   useEffect(() => {
@@ -84,6 +91,14 @@ export const Interval = () => {
     setTimeTexture(texture);
   }, []);
 
+  const handleEnvironmentChange = useCallback((env: string) => {
+    setCurrentEnvironment(env);
+  }, []);
+
+  const handleBreathSync = useCallback((syncLevel: number) => {
+    setBreathSyncLevel(syncLevel);
+  }, []);
+
   if (!isInitialized) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
@@ -110,10 +125,29 @@ export const Interval = () => {
         }}
       />
       
+      {/* Environmental Synthesis Layer */}
+      <EnvironmentalSynthesis 
+        biometricState={biometricState}
+        onEnvironmentChange={handleEnvironmentChange}
+      />
+      
+      {/* Quantum Breath Interface */}
+      <QuantumBreathInterface 
+        biometricState={biometricState}
+        onBreathSync={handleBreathSync}
+      />
+      
       {/* Core Temporal Environment */}
       <ChronoSensoryLoop 
         biometricState={biometricState}
         onTemporalShift={handleTemporalShift}
+      />
+      
+      {/* Temporal Harmonic Generator */}
+      <TemporalHarmonicGenerator 
+        biometricState={biometricState}
+        currentPhase={currentPhase}
+        environment={currentEnvironment}
       />
       
       {/* Attention Phase Detection */}
@@ -126,6 +160,18 @@ export const Interval = () => {
       <MomentSculptor 
         currentPhase={currentPhase}
         timeTexture={timeTexture}
+      />
+      
+      {/* Memory Crystal System */}
+      <MemoryCrystalSystem 
+        biometricState={biometricState}
+        currentPhase={currentPhase}
+      />
+      
+      {/* Temporal Poetry Engine */}
+      <TemporalPoetryEngine 
+        biometricState={biometricState}
+        currentPhase={currentPhase}
       />
       
       {/* Central Awareness Indicator */}
@@ -141,26 +187,34 @@ export const Interval = () => {
         </div>
       </div>
       
-      {/* Ambient Status */}
+      {/* Enhanced Status Display */}
       <div className="fixed top-6 left-6 pointer-events-none">
-        <div className="temporal-surface p-3 rounded-xl backdrop-blur-md">
-          <div className="text-xs text-muted-foreground mb-1">Interval</div>
-          <div className="text-sm font-medium text-foreground">
-            Temporal Coherence: {(temporalIntensity * 100).toFixed(0)}%
-          </div>
-          <div className="text-xs text-primary mt-1 capitalize">
-            {currentPhase.name} State
+        <div className="temporal-surface p-4 rounded-xl backdrop-blur-md">
+          <div className="text-xs text-muted-foreground mb-2">Interval - Advanced</div>
+          <div className="space-y-1">
+            <div className="text-sm font-medium text-foreground">
+              Coherence: {(temporalIntensity * 100).toFixed(0)}%
+            </div>
+            <div className="text-xs text-primary capitalize">
+              {currentPhase.name} State
+            </div>
+            <div className="text-xs text-accent-foreground">
+              Breath Sync: {(breathSyncLevel * 100).toFixed(0)}%
+            </div>
+            <div className="text-xs text-muted-foreground capitalize">
+              {currentEnvironment} Realm
+            </div>
           </div>
         </div>
       </div>
       
-      {/* Gentle Instructions */}
-      <div className="fixed bottom-6 right-6 pointer-events-none">
+      {/* Advanced Instructions */}
+      <div className="fixed bottom-48 right-6 pointer-events-none">
         <div className="temporal-surface p-4 rounded-xl backdrop-blur-md max-w-xs">
           <p className="text-xs text-muted-foreground leading-relaxed">
-            Let the environment adapt to your natural rhythms. 
-            Use the time texture dial to consciously reshape moments.
-            Your biometric harmony guides the temporal flow.
+            Experience novel temporal perception through environmental synthesis, 
+            memory crystals, quantum breath synchronization, and harmonic generation. 
+            Click crystals to revisit captured moments. Poetry emerges from your temporal state.
           </p>
         </div>
       </div>
