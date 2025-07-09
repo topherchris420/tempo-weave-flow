@@ -2,7 +2,7 @@
 
 An ambient temporal modulation app that adapts your subjective experience of time through biometric awareness and environmental feedback.
 
-![Temporal Research](./lovable-uploads/cc22021b-8c2b-4ae1-9e85-b1e9b74d34a7.png)
+![Temporal Research](./image_2.jpg)
 
 ## Overview
 
