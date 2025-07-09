@@ -43,7 +43,7 @@ Interval is designed to feel like being inside a temporal tuning fork. The UX is
 
 ```bash
 # Clone the repository
-git clone <YOUR_GIT_URL>
+git clone topherchris420/tempo-weave-flow
 
 # Navigate to project directory
 cd interval
@@ -63,10 +63,6 @@ npm run dev
 - **Temporal Coherence**: Subtle environmental shifts create felt time perception changes
 - **Minimalist Interface**: Clean, distraction-free experience focused on temporal awareness
 
-## Project URL
 
-**Live App**: [https://lovable.dev/projects/f842109d-eb54-42ca-b5f4-31c058b60700](https://lovable.dev/projects/f842109d-eb54-42ca-b5f4-31c058b60700)
 
----
-
-*Built with [Lovable](https://lovable.dev) - The AI-powered web development platform*
+*Built by [Vers3Dynamics](https://vers3dynamics.com) - my startup*
